@@ -120,13 +120,6 @@ My stack varies by project. These badges represent technologies I've worked with
 
 ---
 
-## A Little More About Me
-
-- I prefer understanding how systems work internally instead of treating frameworks as black boxes.
-- I value reproducible experiments, meaningful tests, and honest performance measurements.
-- I write about what I build so that the lessons are useful beyond the project itself.
-- I'm interested in the intersection of AI research, software engineering, and reliable real-world systems.
-
 ## Let's Connect
 
 I'm interested in connecting with engineers, researchers, and builders working on AI, systems engineering, cybersecurity, and applied machine learning.
