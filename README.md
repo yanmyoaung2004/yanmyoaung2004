@@ -36,11 +36,13 @@ A multi-agent AI system built directly on Python asyncio, HTTPX, and the OpenAI 
 
 An agent-based cybersecurity platform combining threat intelligence, detection, and guided remediation.
 
-- Specialized agents for planning, knowledge retrieval, and threat detection.
-- Integrations with MITRE ATT&CK, VirusTotal, and Wazuh.
-- Agent-to-agent communication and Model Context Protocol (MCP) integration.
-- Security findings, monitoring, alerts, and automated remediation workflows.
-- English and Myanmar language support, including text and voice interactions.
+- Five Python microservices: a FastAPI + LangGraph host orchestrator, plus detection, knowledge, file, and voice services.
+- The host plans each request and delegates over Google's A2A protocol to specialized detection and knowledge agents.
+- Threat intelligence: NVD CVE lookup, MITRE ATT&CK techniques and mitigations from local STIX data, and live web search.
+- Wazuh SIEM integration through the Manager and Indexer APIs: file integrity monitoring, vulnerability, SCA, threat hunting and alerts, IT hygiene, MITRE, and syscollector dashboards.
+- Retrieval: ChromaDB RAG over NIST and Myanmar cyber-law documents (all-MiniLM-L6-v2 embeddings), plus a dedicated Myanmar cyber-law Q&A tool.
+- Real-time WebSocket chat with JWT auth and chat CRUD; a separate LiveKit voice assistant for spoken cybersecurity guidance.
+- Remediation is guided, not automated: agents recommend next steps such as blocking a URL, quarantining a file, or running an antivirus scan.
 
 **Recognition:** APICTA 2025 Myanmar National Representative; APTYPS 2025 Top 10 Finalist and People's Choice Award recipient in the Cybersecurity & Privacy Chatbot Development Competition.
 
