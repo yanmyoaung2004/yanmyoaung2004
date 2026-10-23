@@ -44,14 +44,14 @@ An agent-based cybersecurity platform combining threat intelligence, detection, 
 
 **Recognition:** APICTA 2025 Myanmar National Representative; APTYPS 2025 Top 10 Finalist and People's Choice Award recipient in the Cybersecurity & Privacy Chatbot Development Competition.
 
-### Trace — Endpoint Security & Monitoring
+### Trace — Cybersecurity Operations Platform 
 
-A Go-based security monitoring project focused on endpoint detection and response.
+An open-source SOC platform that ships as a single ~10MB static Go binary — SIEM, SOAR, and endpoint detection with no Docker, Python, or Elasticsearch cluster.
 
-- Security event collection and analysis.
-- Detection rules implemented through a restricted YARA-compatible matcher in pure Go.
-- Investigation into event ingestion, persistent storage, query performance, and crash recovery.
-- Engineering work on bounded queues, storage overflow, and graceful degradation.
+- Detection pipeline: 1,567 log decoders feeding 498 MITRE-mapped rules, 26 YAML playbooks, and multi-agent investigation through response and case management.
+- TSE storage engine: SQLite hot tier + Parquet cold tier; bounded MPMC ingest queue with backpressure and spill-to-disk overflow; crash recovery verified at zero data loss; sharded storage with an optional PostgreSQL query path.
+- Endpoint agent: cross-platform process/file/network monitoring, a restricted YARA-compatible matcher and PE analysis in pure Go (no CGO), mTLS + HMAC transport.
+- Hardening: query router degrades to partial results with warnings instead of failing, RBAC, and an HMAC-chained tamper-evident audit log.
 
 ### Neon Aqua Oasis — VR Digital Twin
 
