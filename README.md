@@ -22,15 +22,15 @@ I'm currently a final-year BSc (Hons) Computer Science student at STI Myanmar Co
 
 ## Selected Projects
 
-### K.I.N.E.T.I.C. — Multi-Agent AI Framework
+### K.I.N.E.T.I.C. — Multi-Agent AI Platform
 
-A multi-agent system built with raw Python, HTTPX, and the OpenAI SDK, without relying on agent orchestration frameworks such as LangChain or CrewAI.
+A multi-agent AI system built directly on Python asyncio, HTTPX, and the OpenAI SDK — no LangChain, CrewAI, or other orchestration framework.
 
-- Dispatcher-registry architecture for coordinating specialized agents.
-- 6 agents and 80+ tools across 7 categories, with access-control mechanisms.
-- Five-provider model failover, with persistent memory backed by SQLite and NumPy.
-- Telegram, FastAPI, and CLI interfaces.
-- Automated test suite with 89 tests, plus Ruff and mypy checks.
+- Dispatcher-registry architecture: a thin KinetiCDispatcher coordinates 6 specialized agents (main, security, coding, Obsidian, productivity, system) with lazy loading, depth-limited delegation, and 5-minute idle eviction.
+- ~70 tools across 13 categories, with per-agent tool allowlists and guardrails for destructive operations.
+- Stage-based LLM routing across five chat providers (Groq, Lightning, Cloudflare, OpenCode, Ollama) with automatic fallback chains per stage — no vendor lock-in.
+- Hybrid memory in SQLite (aiosqlite + FTS5) with NumPy vector recall and MMR reranking; no external vector database.
+- Telegram bot, FastAPI REST API, and Click CLI interfaces.
 
 ### InnoIgniterAI — AI-Powered Cybersecurity Platform
 
